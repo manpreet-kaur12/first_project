@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tip_Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+</head>
+<body>
+        <div id="container">
+                <h1><b>Tip Calculator</b></h1>
+           
+           <form name="mm">
+           	  <p>How much was your bill?</p>
+           	  <p>Rs. <input type="text" placeholder=" Enter Bill Amount" class="amt" name="bills" id="bill"></p>
+           	  <p>How was your service?</p>
+           	  <select id="opt" name="opt">
+           	  	<option selected disabled value="-1"> Choose an option</option>
+           	  	<option value=".2">20% =>Excellent</option>
+           	    <option value=".15">15% =>Very Good</option>
+             	<option value=".10">10% =>Good</option>
+           	 	<option value="0.05">5% =>Average</option>
+           	  	<option value="0.01">1% =>Poor</option>
+           	  </select>
+           	  <p>How many people are sharing the bill?</p>
+           	  <input type="text" placeholder= "  Number of People" class="amt" name="nop" id="nop"></form>
+           	  <button id="btn" onclick="calci()">CALCULATE</button>
+           	  <p id="tip">Tip Amount: Rs. <input  type="text" class="amt" id="put" readonly></p>
+       </div>
+
+       <script type="text/javascript" language="javascript">
+		function calci()
+		{
+				   var bill=document.getElementById("bill").value;
+				   var service=document.getElementById('opt').value;
+				   var people=document.getElementById('nop').value;
+			 
+				   if (bill ===""|| service ==-1)
+				   {
+						   alert("Enter values!!!");
+				   }
+				   else if (people===""|| people<=1)
+					   people=1;
+			   //else
+				   //document.getElementById('each').style.display="block";
+				   var total=(bill*service)/people;
+			 //total= Math.round(total*100)/100;
+			 total=total.toFixed(2);
+				   document.getElementById("put").value= total;
+
+	 }
+	</script>
+</body>     
+</html>

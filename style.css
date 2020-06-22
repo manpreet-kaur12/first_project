@@ -1,0 +1,74 @@
+html,
+body {
+  background: linear-gradient(to RIGHT, rgb(223, 226, 226), rgb(145, 155, 155));
+  font-family: arial;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 320px) {
+  #container {
+    height: 525px;
+    width: 360px;
+    margin: auto;
+    background: #a0a0a0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -o-border-radius: 50px;
+    text-decoration-color: red;
+  }
+
+  h1 {
+    color: white;
+    background-color: #404040;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    text-align: center;
+  }
+
+  form {
+    padding-left: 15px;
+  }
+
+  .amt {
+    border: 2px solid #e0e0e0;
+    height: 30px;
+    background-color: #ccccff;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    outline: none;
+  }
+
+  #opt {
+    border: 2px solid #e0e0e0;
+    height: 40px;
+    margin-left: 15px;
+    width: 160px;
+    background-color: #ccccff;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    outline: none;
+  }
+
+  #btn {
+    background-color: #404040;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 60px;
+    border-radius: 10px;
+  }
+
+  #btn:hover {
+    background: #ff0000;
+  }
+
+  #tip {
+    margin-top: 50px;
+    margin-left: 20px;
+  }
+}
